@@ -1,1 +1,6 @@
-index 
+<h1>All Charts</h1>
+<%= link_to 'new chart', new_chart_url %>
+<hr />
+<% @charts.each do |chart| %>
+  <%= chart.id %>  | <%= chart.type_of %> | <%= chart.title %>  | <%= link_to "Show", chart_url(chart) %><br />
+<% end %>

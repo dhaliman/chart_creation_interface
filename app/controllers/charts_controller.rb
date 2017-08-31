@@ -3,6 +3,10 @@ class ChartsController < ApplicationController
 
   API_KEY = 'AIzaSyBZCSyQ4hpeiRGo4lVSR9rU_SwrAsclcMU'
 
+  def index
+    @charts = Chart.all
+  end
+
   def new
     @chart = Chart.new
   end
