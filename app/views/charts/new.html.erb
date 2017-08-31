@@ -1,3 +1,15 @@
+<%= link_to 'back', root_url %>
+
+<h1>Create a new chart</h1>
+
+<% if @chart.errors.any? %>
+  <ul>
+    <% @chart.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with url: charts_url, method: :post, local: true do |f| %>
 
   <%= f.label 'chart[url]', 'URL'%>
