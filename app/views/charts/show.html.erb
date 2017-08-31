@@ -1,0 +1,20 @@
+<h1>Show</h1>
+<%= @chart.url %><br />
+<%= @chart.title %><br />
+<%= @chart.type_of %><br />
+<%= @chart.x_axis.range %><br />
+<% @chart.series.each do |series| %>
+  <%= series.range %><br />
+<% end %>
+
+
+<% if @chart.type_of == 'line chart' %>
+  <%= line_chart @series.map {|s| {name: s[0], data: Hash[@x_axis[1..-1].zip(s[1..-1])] } } %>
+<% elsif @chart.type_of == 'pie chart' %>
+  <% @series.each do |series| %>
+    <%= series %>
+    <%= pie_chart @x_axis.zip(series) %>
+  <% end %>
+<% elsif @chart.type_of == 'column chart' %>
+  <%= column_chart @series.map {|s| {name: s[0], data: Hash[@x_axis[1..-1].zip(s[1..-1])] } }, stacked: true %>
+<% end %>
