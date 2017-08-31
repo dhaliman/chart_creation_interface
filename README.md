@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# chart_creation_interface
+An interface to create charts from data stored in google spreadsheets
+>>>>>>> c351d6adf8160cddfb8ecd894e716fd9179794a7
