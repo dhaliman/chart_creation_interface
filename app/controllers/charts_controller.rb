@@ -1,4 +1,3 @@
-require 'charts'
 class ChartsController < ApplicationController
 
   API_KEY = 'AIzaSyBZCSyQ4hpeiRGo4lVSR9rU_SwrAsclcMU'
