@@ -4,7 +4,7 @@
   <%= f.text_field 'chart[url]' %><br />
 
   <%= f.label 'chart[type_of]', 'Type' %>
-  <%= f.text_field 'chart[type_of]' %><br />
+  <%= f.select 'chart[type_of]', ['line chart', 'pie chart', 'column chart'] %><br />
 
   <%= f.label 'chart[title]', 'Title' %>
   <%= f.text_field 'chart[title]' %><br />
