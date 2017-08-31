@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require_relative 'extensions'
 
 SPREADSHEET_ID = 't024bMoRiDPIDialGnuKPsg'
 VC_SPREADSHEET_ID = '14kHrnKbX6WOCx26ieE2sPAqMCKiM-kSC22VNhatnW9k'

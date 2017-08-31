@@ -29,31 +29,4 @@
       });
     });
   </script>
-
-<% end %>
-
-
-<h3>If piechart ?</h3>
-
-
-<%= form_with url: charts_url, method: :post, local: true do |f| %>
-
-  <%= f.label 'chart[url]', 'URL'%>
-  <%= f.text_field 'chart[url]' %><br />
-
-  <%= f.label 'chart[type_of]', 'Type' %>
-  <%= f.text_field 'chart[type_of]' %><br />
-
-  <%= f.label 'chart[title]', 'Title' %>
-  <%= f.text_field 'chart[title]' %><br />
-
-  Provide data range for the following in <a href='https://developers.google.com/sheets/api/guides/concepts#a1_notation'>A1 notation</a>:<br />
-
-  <%= f.label 'chart[x_axis]', 'X Axis' %>
-  <%= f.text_field 'chart[x_axis]' %> eg. date<br />
-
-  <%= f.label 'chart[series][]', 'Series' %>
-  <%= f.text_field 'chart[series][]' %><br />
-
-  <%= f.submit %>
 <% end %>
